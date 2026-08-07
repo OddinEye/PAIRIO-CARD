@@ -1,0 +1,361 @@
+@keyframes pop-in {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+:root {
+    --text: #dedede;
+    --icon: #323033;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    min-height: 100dvh;
+    font-family: "Alexandria", sans-serif;
+}
+
+
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100dvh;
+    background: url("assets/Bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(0px) brightness(10%) invert(5%);
+    inset: 0;
+    z-index: -1;
+    transform: scale(1.5);
+}
+
+.container{
+    width: 24.166rem;
+    height: 100dvh;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.name {
+    height: 100px;
+    width: 100%;
+    color: var(--text);
+    font-size: 40px;
+    user-select: none;
+}
+
+.main {
+    border-bottom: 1px solid var(--text);
+    width: 90px;
+}
+
+.small-one {
+    font-size: 20px;
+}
+
+.about {
+    width: 100%;
+    color: var(--text);
+    height: auto;
+    font-size: 13px;
+    font-family: "Alexandria", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+.divider {
+    width: 387.13px;
+    height: 2px;
+    background-color: var(--text);
+}
+
+.socials {
+    display: flex;
+    justify-content: start;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.icon {
+    width: 36.66px;
+    height: 36.66px;
+    background-color: var(--text);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 120ms;
+    font-size: 1rem;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.button-container {
+    width: 100%;
+    flex: 1;
+    padding: 40.33px 40px 10px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    user-select: none;
+}
+
+.discord-button, .work-button, .commission-button {
+    width: 100%;
+    height: 60px;
+    border: 1px solid var(--text);
+    border-radius: 15px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text);
+    cursor: pointer;
+    transition: 120ms;
+    background-color: transparent;
+    font: inherit;
+    user-select: none;
+}
+
+.discord-button:hover {
+    transform: scale(1.02);
+}
+
+.work-button:hover {
+    transform: scale(1.02);
+}
+
+.commission-button:hover {
+    transform: scale(1.02);
+}
+
+
+.fa-plus, .fa-discord, .fa-mug-hot {
+    font-size: 25px;
+}
+
+.commission-button {
+    anchor-name: here;
+}
+
+.kofi {
+    width: 25.88px;
+    height: 25px;
+}
+
+.copyright-container {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+.copyright {
+    font-size: 11px;
+    color: var(--text);
+    padding: 0 20px 20px 20px;
+    font-family: 'Alexandria', sans-serif;
+    margin-top: auto;
+}
+
+.option {
+    cursor: inherit;
+}
+
+#commission-page {
+    width: min(90vw, 400px);
+    height: min-content;
+    background: #050505af;
+    border: 1px solid black;
+    border-radius: 20px;
+    position: fixed;
+    margin: auto;
+    position-anchor: here center;
+    padding: 10px 20px 20px 20px;
+    transition-behavior: allow-discrete;
+}
+
+[popover]::backdrop{
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(10px);
+    background: transparent;
+}
+
+#commission-page:popover-open {
+    animation: pop-in 120ms ease-in;
+}
+
+[popover]::backdrop{
+    animation: pop-in 120ms ease-in;
+    pointer-events: auto;
+}
+
+.commission-buttons{
+    width: 100%;
+    height: 60px;
+    border: 1px solid var(--text);
+    border-radius: 15px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text);
+    cursor: pointer;
+    transition: 120ms;
+    background-color: transparent;
+    font: inherit;
+    user-select: none;
+}
+
+.ko-fi:hover {
+    transform: scale(1.02);
+}
+
+.vgen:hover {
+    transform: scale(1.02);
+}
+
+.fiverr:hover {
+    transform: scale(1.02);
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.barrier {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+}
+
+.text-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.5rem, 1.5vw, 3rem);
+    color: var(--text);
+    padding-top: 10px;
+}
+
+#manga-page {
+    background: #050505af;
+    border: 1px solid black;
+    border-radius: 20px;
+    position: fixed;
+    padding: 20px;
+    margin: auto;
+    transition-behavior: allow-discrete;
+    max-height: 90vh;
+    min-height: 50vh;
+}
+
+#manga-page:popover-open {
+    animation: pop-in 120ms ease-in;
+}
+
+.manga-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 20px;
+    hyphens: 100%;
+    width: min(50vw, 500px);
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.manga-1, .manga-2 {
+    width: 210px; 
+    height: 315px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-items: center;
+    flex-shrink: 1;
+    transition: all 120ms;
+    transform: scale(0.95);
+}
+
+.manga-1:hover, 
+.manga-2:hover {
+    transform: scale(1);
+}
+
+.cover-1, .cover-2 {
+    background-position: center;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    width: 100%;
+    border-radius: 16px;
+    height: 300px;
+    background-color: #1f1f1f;
+}
+.cover-1 {
+    background: url("manga-content/7L7W-cover.png");
+    background-color: #1f1f1f;
+}
+.cover-2 {
+    background-color: black;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border: 2px solid var(--text);
+}
+
+.infomation-1, .infomation-2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    color: var(--text);
+}
+
+@media (max-width: 576px) {
+    .background {
+        transform: scale(1);
+    }
+}
+

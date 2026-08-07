@@ -1,0 +1,106 @@
+/* keyframes */
+@keyframes starting {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes starting-2 {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* animation */
+.background {
+    opacity: 0;
+    animation: starting 250ms ease-out forwards;
+}
+
+.name,
+.copyright,
+.warp1,
+.warp2,
+.warp3,
+.warp4,
+.warp5,
+.warp6,
+.warp7,
+.warp8,
+.divider {
+    opacity: 0;
+    animation: starting-2 250ms ease-out forwards;
+}
+.name {
+    animation-delay: 100ms;
+}
+.warp1 {
+    animation-delay: 200ms;
+}
+.warp2 {
+    animation-delay: 300ms;
+}
+.warp3 {
+    animation-delay: 400ms;
+}
+.warp4 {
+    animation-delay: 500ms;
+}
+.warp5 {
+    animation-delay: 600ms;
+}
+.divider {
+    animation-delay: 700ms;
+}
+.warp6 {
+    animation-delay: 800ms;
+}
+.warp7 {
+    animation-delay: 900ms;
+}
+.warp8 {
+    animation-delay: 1000ms;
+}
+.copyright {
+    animation-delay: 1100ms;
+}
+#commission-page:popover-open .text-content {
+    animation: starting-2 250ms ease-out forwards;
+    opacity: 0;
+}
+
+#commission-page:popover-open .ko-fi {
+    animation: starting 900ms ease-out 100ms forwards;
+    opacity: 0;
+}
+
+#commission-page:popover-open .vgen {
+    animation: starting 900ms ease-out 200ms forwards;
+    opacity: 0;
+}
+
+#commission-page:popover-open .fiverr {
+    animation: starting 900ms ease-out 300ms forwards;
+    opacity: 0;
+}
+
+#manga-page:popover-open .warp9 {
+    animation: starting 400ms ease-out 0ms forwards;
+    opacity: 0;
+}
+
+#manga-page:popover-open .warp10 {
+    animation: starting 400ms ease-out 100ms forwards;
+    opacity: 0;
+}

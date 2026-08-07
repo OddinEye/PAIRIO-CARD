@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pairio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="animation-pack.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="barrier"></div>
+    <div class="container">
+        <div class="intro">
+            <div class="name">
+                <div class="main">
+                    <label>P</label><label class="small-one">AIRIO</label><br>
+                </div>
+                <label class="about">Mangaka • Illustrator</label><br>
+            </div>
+            <div class="socials">
+                <div class="warp1"><div class="instagram icon" onclick="window.open('https://www.instagram.com/pairioo/', '_blank')"><i class="fa-brands fa-instagram" style="color: var(--icon);"></i></div></div>
+                <div class="warp2"><div class="youtube icon" onclick="window.open('https://www.youtube.com/@pairioo', '_blank')"><i class="fa-brands fa-youtube" style="color: var(--icon);"></i></div></div>
+                <div class="warp3"><div class="twitter icon" onclick="window.open('https://www.x.com/pairioo', '_blank')"><i class="fa-brands fa-x-twitter" style="color: var(--icon);"></i></div></div>
+                <div class="warp4"><div class="pinterest icon" onclick="window.open('https://in.pinterest.com/pairioo/', '_blank')"><i class="fa-brands fa-pinterest" style="color: var(--icon);"></i></div></div>
+                <div class="warp5"><div class="threads icon" onclick="window.open('https://www.threads.com/@pairioo', '_blank')"><i class="fa-brands fa-threads" style="color: var(--icon);"></i></div></div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="button-container">
+            <div class="warp6"><button class="commission-button" popovertarget="commission-page"><label class="option">Commission</label><img src="assets/kofi.svg" class="kofi"></button></div>
+            <div class="warp7"><button class="work-button" popovertarget="manga-page"><label class="option">Works</label><i class="fa-solid fa-plus" style="color: var(--text)"></i></button></div>
+            <div class="warp8"><button class="discord-button" onclick="window.open('https://discord.gg/U7ZG2BgSWD', '_blank')"><label class="option">Discord</label><i class="fa-brands fa-discord" style="color: var(--text);"></i></button></div>
+            <div id="commission-page" popover="auto">
+                <div class="content">
+                    <div class="text-content">
+                        <label>COMMISSION ME</label>
+                    </div>
+                    <button class="ko-fi commission-buttons" onclick="window.open('https://ko-fi.com/pairioo#', '_blank')">
+                        <label>Buy me a coffee</label>
+                        <img src="assets/kofi.svg" class="kofi">
+                    </button>
+                    <button class="vgen commission-buttons" onclick="window.open('https://vgen.co/Pairioo', '_blank')">
+                        <label>Vgen</label>
+                        <img src="assets/vgen.png" class="kofi">
+                    </button>
+                    <button class="fiverr commission-buttons" onclick="window.open('https://www.fiverr.com/s/BRAWG01', '_blank')">
+                        <label>Fiverr</label>
+                        <img src="assets/fiverr.png" class="kofi">
+                    </button>
+                </div>
+            </div>
+            <div class="copyright-container">
+                <div class="copyright">
+                    <label>icallhermoon@gmail.com</label><br>
+                    <label>© 2026 ANKLET PAIRIO. ALL RIGHTS RESERVED.</label>
+                </div>
+            </div>
+        </div>
+            <div id="manga-page" popover="auto">
+                <div class="manga-page">
+                    <div class="warp9">
+                        <div class="manga-1">
+                            <div class="cover-1"></div>
+                            <div class="infomation-1">
+                                <label>7 life 7 ways</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="warp10">
+                        <div class="manga-2">
+                            <div class="cover-2">
+                                <label>Coming Soon</label>
+                            </div>
+                            <div class="infomation-2">
+                                <label>Coming Soon</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

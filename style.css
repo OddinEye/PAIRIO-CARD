@@ -26,12 +26,12 @@ body {
     background-color: black;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     width: 100%;
-    min-height: min-content;
+    min-height: 100dvh;
+    margin: 0;
     font-family: "Alexandria", sans-serif;
     overflow: hidden;
-    flex-shrink: 1;
 }
 
 
@@ -49,18 +49,18 @@ body {
     transform: scale(1.5);
 }
 
-.container{
-    width: 24.166rem;
-    height: 100%;
+.container {
+    width: min(100%, 387px);
+    min-height: 100dvh;
     z-index: 1;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
-
 .intro {
     width: 100%;
     height: auto;
-    padding: 40px;
+    padding: clamp(20px, 5vw, 40px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -95,10 +95,10 @@ body {
 }
 
 .divider {
-    width: 387.13px;
+    width: 100%;
+    max-width: 370px;
     height: 2px;
     background-color: var(--text);
-    overflow: hidden;
 }
 
 .socials {
@@ -128,7 +128,7 @@ body {
 .button-container {
     width: 100%;
     flex: 1;
-    padding: 40.33px 40px 10px 40px;
+    padding: 40px clamp(20px, 5vw, 40px) 10px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -305,14 +305,13 @@ body {
     overflow-y: auto;
 }
 
-.manga-1, .manga-2 {
-    width: 210px; 
-    height: 315px;
+.manga-1,
+.manga-2 {
+    width: min(210px, 100%);
+    height: auto;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     align-items: center;
     flex-shrink: 1;
     transition: all 120ms;

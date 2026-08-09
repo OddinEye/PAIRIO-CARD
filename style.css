@@ -30,6 +30,7 @@ body {
     width: 100%;
     min-height: 100dvh;
     font-family: "Alexandria", sans-serif;
+    overflow: hidden;
 }
 
 
